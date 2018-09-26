@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>放心消费制度</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <style>
+        .top {
+            background: #f3f3f3;
+            min-width: 1100px;
+        }
+
+        .disappear {
+            display: none;
+        }
+
+        .top-w {
+            width: 1100px;
+            margin: 0 auto;
+            clear: both;
+            content: '';
+            display: table;
+        }
+
+        .w {
+            width: 1100px;
+            margin: 0 auto;
+        }
+
+        .top ul:first-child li i {
+            padding-right: 10px;
+        }
+
+        .top ul li {
+            float: left;
+            padding: 10px 12px;
+            border-right: 1px dotted #ccc;
+        }
+
+        .top ul li p {
+            font-size: 12px;
+            color: #6a6a6a;
+            float: right;
+        }
+
+        .top ul li:last-child {
+            padding: 10px 10px 10px 15px;
+        }
+
+        .top ul li i {
+            float: left;
+            padding-right: 5px;
+            width: 16px;
+            height: 16px;
+            overflow: hidden;
+        }
+
+        .top ul li:nth-child(2) i {
+            background: url(./img/bg.png) no-repeat -186px -21px;
+        }
+
+        .top ul li:nth-child(4) i {
+            background: url(./img/bg.png) no-repeat -191px -44px;
+        }
+
+        .top ul li:nth-child(5) i {
+            background: url(./img/bg.png) no-repeat -222px -44px;
+        }
+
+        .top ul li:nth-child(7) i {
+            background: url(./img/bg.png) no-repeat -168px -44px;
+        }
+
+        .top ul li:nth-child(7) p i {
+            background: url(./img/bg.png) no-repeat -11px -62px;
+            float: right;
+        }
+
+        .down {
+            position: relative;
+        }
+
+        .download {
+            display: none;
+            position: absolute;
+            top: 40px;
+            right: -70px;
+        }
+
+        .head {
+            height: 201px;
+            border-bottom: 2px solid #FF6699;
+            min-width: 1100px;
+        }
+
+        .logo {
+            margin-right: 70px;
+        }
+
+        .logo img {
+            float: left;
+            padding: 50px 20px 50px 0;
+        }
+
+        .search {
+            padding-top: 20px;
+        }
+
+        .search h4 {
+            text-align: center;
+            font-size: 12px;
+            width: 50px;
+            height: 25px;
+            background: #ff86ae;
+            color: white;
+            line-height: 25px;
+            font-weight: 100;
+        }
+
+        .searcher input {
+            width: 450px;
+            height: 33px;
+            float: left;
+            border: 2px solid #ff86ae;
+        }
+
+        .searcher img {
+            cursor: pointer;
+            height: 33.3px;
+            width: 50px;
+            float: left;
+        }
+
+        .search ul {
+            padding-top: 10px;
+        }
+
+        .search ul li {
+            float: left;
+            font-size: 12px;
+            padding-right: 6px;
+        }
+
+        .search ul li a {
+            color: #666666;
+        }
+
+        .search ul li:first-child a {
+            color: #fa3a7a;
+        }
+
+        .search ul li a:hover {
+            color: #fa3a7a;
+        }
+
+        .nav ul li {
+            text-align: center;
+            float: left;
+            font-weight: 800
+        }
+
+        .nav ul li a {
+            padding: 17px 15px;
+            border-bottom: 2px solid white;
+        }
+
+        .nav ul li:first-child a {
+            color: #fa3a7a;
+            border-bottom: 2px solid #fa3a7a;
+        }
+
+        .nav ul:first-child li a:hover {
+            color: #fa3a7a;
+            border-bottom: 2px solid #fa3a7a;
+        }
+
+        .nav ul li:last-child i {
+            width: 16px;
+            height: 16px;
+            background: url(../img/bg.png) no-repeat -15px -62px;
+            float: right;
+        }
+
+        .nav ul:first-child li:last-child {
+            position: relative;
+        }
+
+        .disp {
+            position: absolute;
+            top: 59px;
+            left: 0px;
+            display: none;
+            z-index: 1234567891;
+            background: white;
+        }
+
+        .disp div {
+            text-align: center;
+            z-index: 123456;
+            font-weight: 100;
+            border: 0;
+            padding: 5px 17px;
+            font-size: 14px;
+        }
+
+        .disp div:hover {
+            background: #c6c6c6;
+            color: #fa3a7a;
+            cursor: pointer;
+        }
+
+        .nav ul:last-child li:first-child a {
+            border-left: 1px solid #a3a2a2;
+            padding: 0;
+            padding-left: 30px;
+        }
+
+        .nav ul:last-child li {
+            padding: 17px 15px;
+
+        }
+
+        .nav ul:last-chlid li:hover {
+            border-bottom: 1px solid white;
+        }
+
+        .nav ul:last-child li a {
+            padding: 0;
+        }
+
+        /**/
+
+        .main {
+            width: 1100px;
+            margin: 0 auto;
+        }
+
+        .main-img {
+            width: 100%;
+            text-align: center;
+
+        }
+
+        /*        */
+
+        .fixr {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            border: 1px solid #FF6699;
+        }
+
+        .fixr input {
+            width: 200px;
+            height: 27px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <div class="top-w">
+                <ul class="fl">
+                    <li>
+                        <a href="./index1.html">
+                       <i><img src="./img/red_like.png" alt=""></i>
+                       <p>美丽说首页</p>
+                   </a>
+                    </li>
+                </ul>
+                <ul class="fr">
+                    <li>
+                        <a href="#">
+                       <i><img src="./img/wx.png" alt=""></i>
+                       <p>微信登录</p>
+                   </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                       <i></i>
+                       <p>QQ登录</p>
+                   </a>
+                    </li>
+                    <li>
+                        <a href="./login.html">
+                            <p>登录</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./regsiter.html">
+                            <p>注册</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                       <i><img src="" alt=""> </i>
+                       <p>我的订单</p>
+                   </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                       <i><img src="./img/hyuan.png" alt=""></i>
+                       <p>美丽说会员</p>
+                   </a>
+                    </li>
+                    <li class="down">
+                        <a href="#">
+                       <i><img src="" alt=""> </i>
+                       <p>下载App<i></i></p>
+                   </a>
+                        <div class="download">
+                            <a href="#">
+                       <img src="./img/1rp_49cgihk50031c69jjk51ilkjk4950_210x157.gif" alt="">
+                   </a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>帮助中心</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="head">
+            <div class="top-w af">
+                <div class="logo fl">
+                    <img src="./img/logo.png" alt="">
+                    <img src="./img/gg.png" alt="">
+                </div>
+                <div class="search fl">
+                    <a href="#">
+                        <h4>宝贝</h4>
+                    </a>
+                    <div class="searcher aft">
+                        <input type="search" placeholder="衬衫不是'ta'的专属">
+                        <img src="./img/soso.png" alt="">
+                    </div>
+                    <ul class="aft">
+                        <li><a href="#">秋季套装</a></li>
+                        <li><a href="#">连衣裙</a></li>
+                        <li><a href="#">破洞针织</a></li>
+                        <li><a href="#">薄卫衣</a></li>
+                        <li><a href="#">薄外套</a></li>
+                        <li><a href="#">秋季单鞋</a></li>
+                        <li><a href="#">牛仔外套</a></li>
+                        <li><a href="#">阔腿裤</a></li>
+                        <li><a href="#">小白鞋</a></li>
+                        <li><a href="#">包包新款</a></li>
+                    </ul>
+                </div>
+                <div class="nav af">
+                    <ul class="fl">
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">最热</a></li>
+                        <li><a href="#">上衣</a></li>
+                        <li><a href="#">裙子</a></li>
+                        <li><a href="#">裤子</a></li>
+                        <li><a href="#">鞋子</a></li>
+                        <li><a href="#">包包</a></li>
+                        <li><a href="#">配饰</a></li>
+                        <li><a href="#">更多<i></i></a>
+                            <div class="disp aft">
+                                <div>内衣</div>
+                                <div>美妆</div>
+                                <div>童装</div>
+                                <div>男装</div>
+                                <div>家居</div>
+                                <div>小家电</div>
+                                <div>食品</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="fr">
+                        <li><a href="#" style="border-bottom: 1px solid white">Hi 范</a></li>
+                        <li><a href="#" style="color: #fa3a7a">明星同款</a></li>
+                        <li><a href="#" style="color: #fa3a7a">韩国馆</a></li>
+                        <li><a href="#" style="color: #fa3a7a">团购</a></li>
+                        <li><a href="#" style="color: #fa3a7a">福利社</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="main">
+            <div class="main-img">
+                <img src="./img/wq.png" alt="" width="60%" height="60%" ;>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <div class="foot">
+            <div class="w">
+                <div class="foot-top">
+                    <div class="foot-lis aft">
+                        <ul class="fl">
+                            <h3>买家帮助</h3>
+                            <li><a href="#">新手指南</a></li>
+                            <li><a href="#">服务保障</a></li>
+                            <li><a href="#">常见问题</a></li>
+                            <li><a href="#">风险监测</a></li>
+                        </ul>
+                        <ul class="fl">
+                            <h3>商家帮助</h3>
+                            <li><a href="#">供货商招募</a></li>
+                            <li><a href="#">商家后台</a></li>
+                        </ul>
+                        <ul class="fl">
+                            <h3>关于我们</h3>
+                            <li><a href="#">关于美丽说</a></li>
+                            <li><a href="#">联系我们</a></li>
+                        </ul>
+                        <ul class="fl">
+                            <h3>关注我们</h3>
+                            <li><a href="#"><i></i>新浪微博</a></li>
+                            <li><a href="#"><i></i>QQ空间</a></li>
+                            <li><a href="#"><i></i>腾讯微博</a></li>
+                        </ul>
+                        <ul class="fr">
+                            <h5>美丽说微信服务号</h5>
+                            <li><a href="#"><img src="./img/fx.png" alt=""></a></li>
+                        </ul>
+                        <ul class="fr">
+                            <h5>美丽说客户端下载</h5>
+                            <li><a href="#"><img src="./img/sao.jpg" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer">
+                        <p>Copyright ©2017 Meilishuo.com 电信与信息服务业务经营许可证100798号 经营性网站备案信息 </p>
+                        <p>京ICP备11031139号 京公网安备110108006045 客服电话：4000-800-577 文明办网文明上网举报电话：010-82615762 违法不良信息举报中心</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="fixr">
+        <input type="range" max=100 min=60 value='60'>
+    </div>
+    <script>
+        var inp = document.querySelector('.fixr input');
+        var ing = document.querySelector('.main-img img');
+        console.log(inp.value);
+        var w = ing.getAttribute('width');
+        var h = ing.getAttribute('height');
+        inp.onchange = function() {
+            w = inp.value + '%';
+            h = inp.value + '%';
+            ing.setAttribute('width', w);
+            ing.setAttribute('height', h);
+        }
+    </script>
+</body>
+
+</html>

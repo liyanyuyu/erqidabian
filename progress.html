@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>维权网</title>
+
+    <style>
+        body {
+            background: url(./img/5b0528d1bc9ae.jpg) top center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .s {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #pros {
+            margin-top: 300px;
+            width: 100%;
+            height:5px;
+            box-shadow: 2px 2px 5px #767676;
+        }
+        button {
+            color: aliceblue;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 30px;
+            width: 150px;
+            height: 60px;
+            background:#ff6699;
+            border: 0;
+            box-shadow: 2px 2px 3px #ff0357;
+        }
+        .fix{
+            position: fixed;
+            left: 50%;
+            top:35%;
+            transform: translate(-30%,0);
+            display: none;
+        }
+        .fix-w{
+            width: 120px;
+            height: 100px;
+            
+        }
+        .fix-w span{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background:#ff6699;
+            margin: 0 1px;
+        }
+        .fix-w span:nth-child(1){
+             animation: str 2s linear 0s infinite;
+        }
+        .fix-w span:nth-child(2){
+             animation: str 2s linear .3s infinite;
+        }
+        .fix-w span:nth-child(3){
+             animation: str 2s linear .6s infinite;
+        }
+        @keyframes str{
+            0%{
+                transform: translateY(0);
+                opacity: 1;
+            }
+            50%{
+                transform: translateY(30px);
+                opacity: 0.1;
+            }
+            100%{
+                transform: translateY(0);
+                opacity:1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="s">
+        <progress value="0" max="1000" min='1' id='pros'></progress>
+        <button>点击进入</button>
+    </header>
+    <div class="fix">
+        <div class="fix-w">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <script>
+        var pro = document.querySelector('progress');
+        var btn = document.querySelector('button');
+        var fix = document.querySelector('.fix');
+        var span = document.querySelectorAll('.fix span');
+        console.log(span)
+        var i = 0;
+        var color;
+        btn.onclick = function() {
+            btn.innerHTML = '正在进入';
+            alert('是否进入维权知识网站？');
+            btn.disabled = 'disabled';
+            fix.style.display='block';
+            var timer = setInterval(function() {
+
+                var i = pro.value;
+                i++;
+                pro.value = i;
+                if (i >= 1000) {
+                    clearInterval(timer);
+                    window.location.href = 'donghua.html';
+                }
+            },10)
+        }
+        function demo(){
+   		
+        
+   	}
+       setInterval(function(){
+           var r=Math.floor(Math.random()*(255-1)+1);
+   		var g=Math.floor(Math.random()*(255-1)+1);
+   		var b=Math.floor(Math.random()*(255-1)+1);
+   		color=`rgb(${r},${g},${b})`;
+           for(var i=0;i<span.length;i++){
+                span[i].style.background=color;
+            }
+       },1000)
+       
+        
+    </script>
+</body>
+
+</html>

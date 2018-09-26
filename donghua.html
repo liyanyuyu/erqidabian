@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            background-image:url(./img/xiangqing/20150106093113448-1988454.jpg);
+            width: 100%;
+            overflow:hidden;
+        }
+        h1{
+            font-size: 100px;
+            transition: 3s all;
+        }
+        .disappear{
+            display: none;
+        }
+        .appear{
+            display: block;
+        }
+        .bodyd div{
+             margin-top: 300px;
+            color: white;
+            text-align: center;
+        }
+        .bodyheader,.bodyfooter{
+            position: relative;
+             
+        }
+         .bodyheader h1{
+            
+            animation: h11 3s linear infinite;
+        }
+
+             @keyframes h11{
+                0%{
+                    transform:rotate(0deg) scale(0.1);
+                    opacity:0;
+                }
+                50%{
+                    transform: rotate(360deg) scale(1);
+                    opacity:1;
+                }
+                100%{
+                    transform: rotate(360deg) scale(5);
+                    opacity:0.5;
+                }
+            }
+        .bodyfooter h1{
+            
+            animation:h4 3000ms infinite;
+        }
+        @keyframes h4{
+                0%{
+                    transform:scale(5);
+                    opacity:0;
+                }
+                50%{
+                    transform:scale(1);
+                    opacity:1;
+                }
+                100%{
+                    transform:scale(0.1);
+                    opacity:0.5;
+                }
+            }
+         .bodyfooter h1{
+            animation:h5 3s linear infinite;
+        }
+        @keyframes h5{
+                0%{
+                    transform:scale(5);
+                    opacity:0;
+                }
+                50%{
+                    transform:scale(1);
+                    opacity:1;
+                }
+                100%{
+                    transform:scale(1);
+                    opacity:1;
+                }
+            }
+    </style>
+</head>
+<body>
+    <div class="bodyd">
+        <div class="bodyheader">
+            <h1 class="h1 h11">3</h1> 
+           <h1 class="h2 disappear h11">2</h1> 
+           <h1 class="h3 disappear h11">1</h1>
+        </div>
+        <div class="bodyfooter">
+            <h1 class="h4 disappear pp">准备好了吗？</h1> 
+           <h1 class="h5 disappear pp">正在进入！</h1>
+        </div>
+    </div>
+     <script>
+        var h1s=document.querySelectorAll("h1");
+         console.log(h1s)
+        var i=1;
+        function get(){
+            if(i===h1s.length){
+                i=0;
+            }
+            h1s[i].setAttribute("class","appear");
+            var j="";
+            if(i===0){
+                j=h1s.length-1;
+            }else{
+                j=i-1;
+            }
+            h1s[j].setAttribute("class","disappear");
+            i++;
+        }
+
+        setInterval(function(){
+            get();
+        },3000);
+           function tet(){
+                window.location.href="sitein.html";
+           }
+        setInterval(function(){
+            tet();
+        },15000);
+    </script> 
+</body>
+</html>
